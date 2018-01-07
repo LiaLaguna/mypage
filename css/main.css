@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#content > * {
+  padding: 20px 40px;
+}
+
+body {
+  color: #343a40;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+header, footer {
+  padding: 20px 40px;
+  background-color: #343a40;
+  color: #fff;
+}
+
+.logo {
+  float: left;
+  margin: 0;
+}
+
+header > nav > p {
+  float: right;
+  margin-left: 20px;
+}
+
+figure > img {
+  width: 100%;
+}
+
+article {
+  text-align: left;
+}
+
+article > p {
+  margin-top: 10px;
+  text-align: justify;
+}
+
+button {
+  margin-top: 15px;
+  background-color: #007bff;
+  border-radius: 8px;
+  color: #fff;
+  padding: 15px;
+  font-size: 18px;
+}
+
+.section-border > img {
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+}
+
+.section-border {
+  border: 0.5px solid #CCCCCC;
+  border-radius: 8px 8px 0 0;
+}
+
+.section-info {
+  text-align: left;
+  margin: 20px;
+}
+
+.button-border > button {
+  margin: 20px 108px 20px 0;
+  font-size: 16px;
+}
+
+.button-border {
+  border: 0.5px solid #CCCCCC;
+  border-radius: 0 0 8px 8px;
+  background-color: #f7f7f7;
+  margin-top: -1px;
+}
+
+ /* Estableciendo grid areas */
+header{
+  grid-area: header;
+}
+
+figure {
+  grid-area: figure;
+}
+
+.article1 {
+  grid-area: article1;
+}
+
+.article2 {
+  grid-area: article2;
+}
+
+.card1 {
+  grid-area: card1;
+}
+
+.card2 {
+  grid-area: card2;
+}
+
+.card3 {
+  grid-area: card3;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/* Mobile grid */
+#content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, minmax(200px auto));
+  grid-gap: 10px;
+  max-width: 960px;
+  margin: 0 auto;
+  grid-template-areas:
+   'header header header'
+   'figure figure figure'
+   'article1 article1 article1'
+   'article2 article2 article2'
+   'card1 card1 card1'
+   'card2 card2 card2'
+   'card3 card3 card3'
+   'footer footer footer'
+}
+
+/* Desktop grid */
+@media screen and (min-width: 769px){
+  #content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(200px auto));
+    grid-gap: 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+     grid-template-areas:
+     'header header header'
+     'figure figure figure'
+     'article1 article1 article2'
+     'card1 card2 card3'
+     'footer footer footer'
+  }
+}
